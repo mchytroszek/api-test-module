@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    TestNG suite configuration for the multi-language API test module.
+    Tests are organized into three parallel groups by language:
+      - Java   (JavaApiTest)   — 5 test methods
+      - Kotlin (KotlinApiTest) — 3 test methods
+      - Groovy (GroovyApiTest) — 3 test methods
+    Total: 11 test methods covering smoke, sanity, and regression groups.
+-->
+<suite name="MultiLanguageApiTestSuite" verbose="1" parallel="classes" thread-count="3">
+
+    <test name="Java API Tests">
+        <classes>
+            <class name="com.example.api.tests.JavaApiTest"/>
+        </classes>
+    </test>
+
+    <test name="Kotlin API Tests">
+        <classes>
+            <class name="com.example.api.tests.KotlinApiTest"/>
+        </classes>
+    </test>
+
+    <test name="Groovy API Tests">
+        <classes>
+            <class name="com.example.api.tests.GroovyApiTest"/>
+        </classes>
+    </test>
+
+</suite>
